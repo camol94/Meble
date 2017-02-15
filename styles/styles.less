@@ -1,6 +1,5 @@
 body {
 	margin: 0 auto;
-
 	font-size: @basic-font-size;
 	font-family: @font-family;
 	background: #fff;	
@@ -34,14 +33,19 @@ header {
 	nav {
 		display: block;
 		.center;		
-		ul {			
+		ul {
+			padding: 0;	
 			li {
 				display: inline;				
-				padding: 4px 8px;				
+				padding: 3px 5px;
+				margin: 0;
+				a {
+					color: @header-color;
+					font-size: 1em;
+				}			
 				&:hover {
 					background: @header-color;
-					border-top-left-radius: 10px;
-					border-top-right-radius: 10px;
+					border-radius: 10px;
 					a {
 						color: #fff;
 						text-decoration: none;
@@ -71,59 +75,114 @@ header {
 article {
 	margin: 15px 5px;
 }
+.blaty {
+	margin-top: 94px;
+}
 .slider {
-	margin: 0;
+	margin:  0;
+	margin-top: 85px;
+	border-bottom: 1px solid @header-color;
 	.main-slide-1 {
-		background-image: url('../images/slider_1.jpg');
+		background-image: url('../images/slider/img1.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-position: 0 0;
+		background-position: center;
+		padding: 190px 0;
 	}
 	.main-slide-2 {
-		background-image: url('../images/slider_2.jpg');
+		background-image: url('../images/slider/img2.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-position: 0 0;
+		background-position: center;
+		padding: 190px 0;		
+	}
+	.main-slide-3 {
+		background-image: url('../images/slider/img3.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		padding: 190px 0;
+
+	}
+	.container {
+		width: 100%;
+
 	}
 }
 .main-slider-content {
-		padding: 15% 0;
-		.center;
-		color: white;
-		position: relative;
+		background: rgba(255, 255, 255, 0.5);
+		color: lighten(@header-color, 15%);		
 		z-index: 1;
+		padding: 5px 0;
+		font-family: Pangolin, sans-serif;
+
+		.center;
 		h1 {
-			font-size: 26px;
-			line-height: 33px;
+			font-size: 28px;
+			line-height: 28px;
 			font-weight: 400;
 		}
 		p {
-			font-size: 12px;
+			font-size: 18px;
 			line-height: 1;
 		}
 }
 .section-title {
-	font-size: 24px;
-	.center;
-	border: 1px solid red;
-	width: 45%;
-	margin: 0 auto 10px;
+	font-size: 28px;
+	.center;	
+	margin: 0 auto 5px;
+	font-family: Pangolin, sans-serif;
+	color: lighten(@header-color, 20%);
 }
-.about, .gallery, .partners {
-	.container {
-		background: lighten(@header-color, 6%);
-		border-radius: 15px;
-		padding: 10px 15px;
-	}
-	.section-title {
-		color: blue;
-	}
+.section-content {
+	padding: 15px 10px;
 }
 .offer, .contact, {
 	background: @second-bg;
 	margin: 0;
-	.section-title {
-		color: red;
+}
+.about {
+	.section-content {
+		text-align: justify;
+		font-size: 12px;
+		i {
+			color: @header-color;
+		}
+		@media all and (min-width: 768px ) {
+			font-size: 17px;
+			.center;
+		}
+	}
+}
+.offer {
+	.col-sm-4 {
+		.center;
+		max-width: 380px;
+		margin: 0 auto;
+	}
+	.item {
+		
+		border: 1px solid @header-color;
+		padding: 10px;
+		margin: 5px;
+		
+	}
+	h3 {
+		font-size: 20px;
+		margin: 0;
+		padding: 0;
+	}
+	img {
+		width: 100%;
+		height: 250px;
+		display: block;
+		margin-bottom: 10px;
+	}
+	a {
+		margin-top: 10px;		
+		background: @header-color;
+		border: none;
+		color: white;
 	}
 }
 .partners {
