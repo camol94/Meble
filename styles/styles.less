@@ -127,6 +127,7 @@ article {
 			line-height: 1;
 		}
 }
+
 .section-title {
 	font-size: 28px;
 	.center;	
@@ -137,10 +138,7 @@ article {
 .section-content {
 	padding: 15px 10px;
 }
-.offer, .contact, {
-	background: @second-bg;
-	margin: 0;
-}
+
 .about {
 	.section-content {
 		text-align: justify;
@@ -155,6 +153,8 @@ article {
 	}
 }
 .offer {
+	background: @second-bg;
+	margin: 0;
 	.col-sm-4 {
 		.center;
 		max-width: 380px;
@@ -177,6 +177,7 @@ article {
 		height: 250px;
 		display: block;
 		margin-bottom: 10px;
+		border: 1px solid @header-color;
 	}
 	a {
 		margin-top: 10px;		
@@ -184,12 +185,20 @@ article {
 		border: none;
 		color: white;
 	}
-}
-.gallery {
-	.section-content {
-		
-		
+	.more-button {
+	padding: 3px 6px;
+	border-radius: 9px;
+	&:hover {
+		text-decoration: none;
+		padding: 4px 9px;
+		border: 1px solid @header-color;
+		background: white;
+		color: @header-color;
+		}
 	}
+}
+.contact {
+	background: #fff;
 }
 .partners {
 	.slider2 {
@@ -206,8 +215,43 @@ article {
 footer {
 	.footer-main {
 		background: #ccc;
+		border-top: 1px solid lighten(@header-color, 20%);
+		.col-sm-4 {
+			.center;
+			padding: 0 3%;
+			@media all and (min-width: 768px) {
+				.left;
+			}
+		}
+		h4 {
+			color: lighten(@header-color, 20%);
+		}		
+		ul {			
+			li {
+				padding: 9px 3px;
+				border-top: 1px solid darken(#ccc, 10%);
+				&:first-child {
+					border-top: none;
+				}
+				i {
+					font-size: 24px;
+					margin-right: 5px;
+				}
+				span {
+					font-size: 18px;
+				}
+				a {
+					color: #000;
+					&:hover {
+						color: @accent-color;
+					}
+				}
+			}
+		}
 	}
 	.footer-copy {
-		background: darken(#ccc, 10%)
+		background: darken(#ccc, 10%);
+		text-align: center;
+		padding: 8px;
 	}
 }
