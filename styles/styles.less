@@ -4,11 +4,7 @@ body {
 	font-family: @font-family;
 	background: #fff;	
 	border-top: none;
-	border-bottom: none;
-	margin-top: 98px;
-	@media all and (min-width: 768px) {
-		margin-top: 74px;
-	}
+	border-bottom: none;	
 }
 .container {
 	margin: 0 auto;
@@ -25,10 +21,14 @@ header {
 	.clearfix;
 	background: #fff;
 	border-bottom: 1px solid @header-color;
+	height: 61px;
 	.logo {
 		display: block;
 		.center;
-		height: 74px;
+		height: 40px;
+		img {
+			max-height: 40px;
+		}
 	}
 	nav {
 		display: block;
@@ -57,10 +57,11 @@ header {
 	@media all and (min-width: 768px) {
 		.logo {
 			float: left;
+			line-height: 64px;
 		}
 		nav {
 			float: right;
-			line-height: 74px;
+			line-height: 64px;
 			ul {				
 				li {
 					
@@ -80,7 +81,7 @@ article {
 }
 .slider {
 	margin:  0;
-	margin-top: 85px;
+	margin-top: 44px;
 	border-bottom: 1px solid @header-color;
 	.main-slide-1 {
 		background-image: url('../images/slider/img1.jpg');
@@ -131,7 +132,7 @@ article {
 .section-title {
 	font-size: 28px;
 	.center;	
-	margin: 0 auto 5px;
+	margin: 55px auto 5px;
 	font-family: Pangolin, sans-serif;
 	color: lighten(@header-color, 20%);
 }
@@ -139,21 +140,17 @@ article {
 	padding: 15px 10px;
 }
 
-.about {
+.about, .fronty, .meble, .blaty {
 	.section-content {
 		text-align: justify;
 		font-size: 12px;
-		i {
-			color: @header-color;
-		}
 		@media all and (min-width: 768px ) {
 			font-size: 17px;
 			.center;
 		}
 	}
 }
-.offer {
-	background: @second-bg;
+.offer {	
 	margin: 0;
 	.col-sm-4 {
 		.center;
@@ -253,5 +250,88 @@ footer {
 		background: darken(#ccc, 10%);
 		text-align: center;
 		padding: 8px;
+	}
+}
+
+
+
+header {
+	margin-bottom: 105px;
+}
+
+
+// 
+// 
+// 
+.fronty, .blaty, .meble {
+	margin-top: 65px;
+	.section-title {
+		margin-top: 5px;
+	}
+	.container {
+		margin-bottom: 10px;
+	}
+	
+	span {
+		margin: 0 auto;
+		.center;
+		display: block;
+	}
+	.back-button {
+		color: #fff;
+		background: @header-color;
+		border: none;
+		padding: 3px 6px;
+		border-radius: 9px;
+		&:hover {
+			text-decoration: none;
+			padding: 4px 9px;
+			border: 1px solid @header-color;
+			background: white;
+			color: @header-color;
+		}
+	}
+}
+.fronty {
+	h4 {
+		.center;
+		color: lighten(@header-color, 20%)
+	}
+	#tabs {
+		border: 1px solid @header-color;
+		margin-bottom: 10px;
+		ul {
+			@media all and (min-width: 768px) {
+				border-bottom: 1px solid @header-color;
+			}
+			li {
+				border-bottom: 1px solid @header-color;
+				padding: 0 5px;
+				.center;
+				&:hover {
+					
+					background: @header-color;
+					a {
+						color: #fff;
+					}
+				}
+				a {
+					outline: none;
+					text-decoration: none;
+					color: @header-color;
+				}
+				@media all and (min-width: 768px) {
+					display: inline;
+					border: 1px solid @header-color;
+					border-top: none;
+					padding-top: 2px;
+					padding-bottom: 2px;
+				}
+			}
+		}
+		p {
+			padding: 10px;
+
+		}
 	}
 }

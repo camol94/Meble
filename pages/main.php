@@ -1,39 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>GrekasMeble</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="styles/main.css">
-	<link href="https://fonts.googleapis.com/css?family=Pangolin|Roboto" rel="stylesheet">
-	 <!-- LESS -->
-    <link rel="stylesheet" type="text/less" href="styles/main.less">
-    <link rel="stylesheet" type="text/less" href="styles/jquery.bxslider.css">
-    
-    <link href="styles/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles/hexagons.css"> 
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <script src="js/bootstrap.min.js"></script>   
-    <script src="js/less.min.js"></script>
-    <script src="js/jquery-2.0.3.min.js"></script>
-    <script src="js/jquery.bxslider.min.js"></script>
-    <script src="js/hexagons.js"></script>
-</head>
-<body>
-<header>
-	<div class="container">
-		<div class="logo"><a href=""><img src="images/logo.jpeg" alt=""></a></div>	
-		<nav>		
-			<ul>
-				<li><a href="">Home</a></li>
-				<li><a href="#about">O firmie</a></li>
-				<li><a href="">Oferta</a></li>
-				<li><a href="">Galeria</a></li>
-				<li><a href="">Kontakt</a></li>	
-			</ul>
-		</nav>
-	</div>
-</header>
+<?php include('naglowek.php'); ?>
 <section class="main">
 	<!-- SLIDER -->
 	<article class="slider">		
@@ -72,7 +37,7 @@
 		
 	</article>
 	<!-- ABOUT -->
-	<article class="about" id="about">
+	<article class="about">
 		<div class="container">
 			<div class="section-title">O Nas</div>
 			<div class="section-content">Firma <i>GREKAS</i> rozpoczęła swoją działalność 1 marca 2013 , jako Autoryzowany Dystrybutor „LUPUS” , który jest liderem w produkcji zarówno w Polsce jak i w Europie. W swojej ofercie posiadamy bogatą ofertę asortymentową elementów do produkcji mebli. Głównym celem naszej działalności jest zaoferowanie branży meblarskiej oraz klientom indywidualnym jak najszerszej oferty materiałów i elementów służących do produkcji różnego rodzajów mebli. Zaopatrujemy pracownie meblarskie, studia projektowe oraz zakłady stolarskie w blaty kuchenne, fronty meblowe, profile meblowe oraz laminaty. Posiadamy w ofercie także parapety wewnętrzne. Specjalizujemy się projektowaniem wnętrz (kuchnie, szafy, łazienki, meble pokojowe, zabudowy wnęk – także te nietypowe), wg indywidualnych wymagań Klientów. Wykonujemy także wykończenia mieszkań „pod klucz”. Dysponujemy własnym salonem meblowym oraz zapleczem handlowo – magazynowym znajdującym się w dzielnicy Ursus w Warszawie. Dzięki temu jesteśmy w stanie zrealizować każde zamówienie w dużych ilościach i krótkim terminie.</div>
@@ -116,69 +81,4 @@
 		</div>
 	</article>
 </section>
-<footer>	
-	<div class="footer-main">
-		<div class="container">
-			<div class="col-sm-4 links">
-			<h4>Szybkie Linki</h4>
-				<ul>
-					<li><a href="">Strona Główna</a></li>
-					<li><a href="">Złóż Zamówienie</a></li>
-					<li><a href="">Facebook</a></li>
-					<li><a href="">Google+</a></li>			
-				</ul>
-				
-			</div>
-			<div class="col-sm-4 adress">
-				<h4>Dane Kontaktowe</h4>
-				<ul>
-					<li>Grekas Meble</li>
-					<li>ul. Gierdziejewskiego 7 / 272</li>
-					<li>02-495 Warszawa</li>
-					<li><i class="fa fa-mobile"></i>123-456-789</li>
-					<li><i class="fa fa-mobile"></i>123-456-789</li>
-				</ul>
-			</div>
-			<div class="col-sm-4 social">
-				<h4>Godziny Otwarcia</h4>
-				<ul>
-					<li>Poniedziałek-Piątek: <span>9-17</span></li>
-					<li>Sobota: <span>10-15</span></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="footer-copy">
-		<div class="container">
-			<div class="social-icons">
-				<a href="#"><span class="hb hb-xs spin-icon"><i class="fa fa-facebook"></i></span></a>
-				<a href="#"><span class="hb hb-xs spin-icon"><i class="fa fa-twitter"></i></span></a>
-				<a href="#"><span class="hb hb-xs spin-icon"><i class="fa fa-google-plus"></i></span></a> 
-				<a href="#"><span class="hb hb-xs spin-icon"><i class="fa fa-envelope"></i></span></a>  
-			</div>
-			Copyright 2017 by Grekas Meble<br>Code by <a href="http://camol94.github.io" target="_blank">Kamil Bała</a>
-		</div>
-	</div>	
-</footer>
-<script>
-$('#main-slider').bxSlider({
-	mode: 'fade',
-	controls: false,
-	pager: false,
-	auto: true
-});
-$(document).ready(function(){
-  $('.slider2').bxSlider({
-    slideWidth: 270,
-    minSlides: 2,
-    maxSlides: 5,
-    moveSlides: 1,
-    slideMargin: 10,
-    auto: true,
-    controls: false,
-    pager: false
-  });
-});
-</script>
-</body>
-</html>
+<?php include('stopka.php'); ?>
